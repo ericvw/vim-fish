@@ -10,5 +10,11 @@ endif
 " fish shell syntax is case sensitive.
 syntax case match
 
+" Comments
+syntax match fishComment /#.*$/
+
+" Default highlighting
+highlight default link fishComment	Comment
+
 " Set current syntax.
 let b:current_syntax = "fish"
