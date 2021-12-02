@@ -7,5 +7,8 @@ if exists("b:current_syntax")
     finish
 endif
 
+" fish shell syntax is case sensitive.
+syntax case match
+
 " Set current syntax.
 let b:current_syntax = "fish"
