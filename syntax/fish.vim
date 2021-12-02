@@ -13,8 +13,18 @@ syntax case match
 " Comments
 syntax match fishComment /#.*$/
 
+" Strings
+syntax region fishSingleQuote matchgroup=fishQuote start=+'+ end=+'+
+syntax region fishDoubleQuote matchgroup=fishQuote start=+"+ end=+"+
+
 " Default highlighting
+highlight default link fishDoubleQuote	fishString
+highlight default link fishSingleQuote	fishString
+highlight default link fishQuote	fishOperator
+
 highlight default link fishComment	Comment
+highlight default link fishOperator	Operator
+highlight default link fishString	String
 
 " Set current syntax.
 let b:current_syntax = "fish"
